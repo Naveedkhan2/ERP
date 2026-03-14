@@ -1,0 +1,8 @@
+# Hostinger / Apache: ERP in subfolder /erp, route all /erp/api/* to index.php
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /erp/api/
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>

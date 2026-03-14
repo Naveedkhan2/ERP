@@ -1,0 +1,898 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Software — Epsilon Systems</title>
+  <link rel="icon" type="image/png" href="./assets/img/logo.png">
+  <meta name="description" content="Software solutions by Epsilon Systems - Custom industrial software, SCADA systems, and automation applications.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/solution.css">
+  <style>
+    /* ========== SOFTWARE SECTIONS STYLES ========== */
+    .software-sections {
+      padding: 0;
+      background: linear-gradient(180deg, #f8fafc 0%, #ffffff 50%, #f8fafc 100%);
+    }
+
+    .software-section {
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .software-section:nth-child(even) {
+      background: linear-gradient(135deg, #001a4d 0%, #003399 50%, #0047b3 100%);
+    }
+
+    .software-section:nth-child(odd) {
+      background: #ffffff;
+    }
+
+    .software-section-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .software-section:nth-child(odd) .software-section-header h2 {
+      color: #003399;
+      font-size: 2.5rem;
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+    }
+
+    .software-section:nth-child(even) .software-section-header h2 {
+      color: #ffffff;
+      font-size: 2.5rem;
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+    }
+
+    .software-section-header h2::after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #00b4d8, #0077b6);
+      border-radius: 2px;
+    }
+
+    .software-content-wrapper {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    /* Zig-zag layout */
+    .software-section:nth-child(odd) .software-content-wrapper {
+      direction: ltr;
+    }
+
+    .software-section:nth-child(even) .software-content-wrapper {
+      direction: rtl;
+    }
+
+    .software-section:nth-child(even) .software-content-wrapper > * {
+      direction: ltr;
+    }
+
+    /* Text Content Styles */
+    .software-text-content {
+      padding: 20px 0;
+    }
+
+    .software-section:nth-child(odd) .software-text-content h3 {
+      color: #003399;
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .software-section:nth-child(even) .software-text-content h3 {
+      color: #ffffff;
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .software-section:nth-child(odd) .software-text-content p {
+      color: #4a5568;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 25px;
+    }
+
+    .software-section:nth-child(even) .software-text-content p {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 25px;
+    }
+
+    .software-features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .software-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+      font-size: 1rem;
+    }
+
+    .software-section:nth-child(odd) .software-features li {
+      color: #2d3748;
+    }
+
+    .software-section:nth-child(even) .software-features li {
+      color: rgba(255, 255, 255, 0.95);
+    }
+
+    .software-features li svg {
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    .software-section:nth-child(odd) .software-features li svg {
+      color: #00b4d8;
+    }
+
+    .software-section:nth-child(even) .software-features li svg {
+      color: #00d4ff;
+    }
+
+    .software-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 30px;
+      padding: 14px 28px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .software-section:nth-child(odd) .software-cta-btn {
+      background: linear-gradient(135deg, #003399, #0047b3);
+      color: #ffffff;
+    }
+
+    .software-section:nth-child(odd) .software-cta-btn:hover {
+      background: linear-gradient(135deg, #002266, #003399);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 51, 153, 0.3);
+    }
+
+    .software-section:nth-child(even) .software-cta-btn {
+      background: #ffffff;
+      color: #003399;
+    }
+
+    .software-section:nth-child(even) .software-cta-btn:hover {
+      background: #f0f4ff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+    }
+
+    /* Carousel Container */
+    .software-carousel-container {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+  aspect-ratio: 16 / 10; /* This creates the "box" shape */
+  background: #001a4d;
+  width: 100%;           /* Ensure it spans the grid column */
+}
+
+    .software-section:nth-child(even) .software-carousel-container {
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Video Container */
+    .software-video-container {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+      background: #0a0a0a;
+      aspect-ratio: 16 / 9;
+    }
+
+    .software-video-container video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 55%;
+      transform: scale(1.5);
+      transform-origin: center 55%;
+      display: block;
+    }
+
+    .software-section:nth-child(even) .software-video-container {
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    .software-carousel {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .software-carousel-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.8s ease-in-out;
+    }
+
+    .software-carousel-slide.active {
+      opacity: 1;
+    }
+
+    .software-carousel-slide img,
+    .software-carousel-slide video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Web Application Development carousel: fit images without cropping */
+    .software-carousel--webapps .software-carousel-slide img {
+      object-fit: contain;
+      background-color: #001a4d;
+    }
+
+    /* Customized AI-Powered Platforms carousel: fit images without cropping */
+    .software-carousel--ai-platforms .software-carousel-slide img {
+      object-fit: contain;
+      background-color: #001a4d;
+    }
+
+    /* Carousel Indicators */
+    .carousel-indicators {
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 10;
+    }
+
+    .carousel-indicator {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.4);
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .carousel-indicator.active {
+      background: #ffffff;
+      transform: scale(1.2);
+    }
+
+    .carousel-indicator:hover {
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    /* Video Play Overlay */
+    .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(0, 51, 153, 0.3), rgba(0, 71, 179, 0.2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .software-carousel-container:hover .video-overlay {
+      opacity: 1;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 968px) {
+      .software-section {
+        padding: 60px 0;
+      }
+
+      .software-content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      /* Force vertical stack: image/carousel on top, text below */
+      .software-section:nth-child(odd) .software-content-wrapper,
+      .software-section:nth-child(even) .software-content-wrapper {
+        direction: ltr;
+      }
+
+      .software-carousel-container,
+      .software-video-container {
+        order: -1;
+      }
+
+      .software-text-content {
+        order: 1;
+        text-align: center;
+      }
+
+      .software-features {
+        display: inline-block;
+        text-align: left;
+      }
+
+      .software-section-header h2 {
+        font-size: 2rem;
+      }
+
+      .software-text-content h3 {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .software-section {
+        padding: 50px 0;
+      }
+
+      .software-section-header {
+        margin-bottom: 35px;
+      }
+
+      .software-section-header h2 {
+        font-size: 1.75rem;
+      }
+
+      .software-content-wrapper {
+        padding: 0 16px;
+        gap: 30px;
+      }
+
+      .software-text-content h3 {
+        font-size: 1.35rem;
+      }
+
+      .software-text-content p {
+        font-size: 1rem;
+      }
+
+      .software-features li {
+        font-size: 0.95rem;
+      }
+
+      .software-carousel-container,
+      .software-video-container {
+        aspect-ratio: 16 / 9;
+        border-radius: 12px;
+      }
+    }
+
+    /* Decorative Elements */
+    .software-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      opacity: 0.03;
+      background-image: 
+        radial-gradient(circle at 20% 80%, #003399 1px, transparent 1px),
+        radial-gradient(circle at 80% 20%, #003399 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .software-section:nth-child(even)::before {
+      opacity: 0.05;
+      background-image: 
+        radial-gradient(circle at 20% 80%, #ffffff 1px, transparent 1px),
+        radial-gradient(circle at 80% 20%, #ffffff 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP UTILITY BAR -->
+  <div class="utility-bar">
+    <div class="container utility-inner">
+      <div class="utility-left">
+        <span class="utility-item">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          info@epsilonsystems.org
+        </span>
+        <a href="https://maps.google.com/?q=Sea+Breeze+Plaza+Shahrah-e-Faisal+Karachi" target="_blank" class="utility-item">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          Office #105 Sea Breeze Plaza, Shahrah‑e‑Faisal, Karachi
+        </a>
+        <a href="https://maps.google.com/?cid=1215322216953778251&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="utility-item">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          NASTP, Silicon Valley 02, Karachi
+        </a>
+      </div>
+      <div class="utility-right">
+        <a href="https://www.linkedin.com/company/epsilon-smart-solutions/" target="_blank" rel="noopener" class="utility-item" aria-label="LinkedIn">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN NAVIGATION -->
+  <header class="main-nav main-nav--solid">
+    <div class="container nav-inner">
+      <div class="nav-logo">
+        <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+          <img src="assets/img/logo.png" alt="Epsilon Systems Logo" class="logo-img" width="60" height="60">
+          <div class="logo-text">
+            <span class="logo-main">Epsilon Systems</span>
+            <span class="logo-sub">Sense · Analyze · Automate · Monitor</span>
+          </div>
+        </a>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-menu" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        
+        <!-- Services Dropdown -->
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-btn">Services <span class="dropdown-arrow">▼</span></button>
+          <div class="nav-dropdown-content">
+            <a href="solution.html" data-service="energy">Energy Monitoring</a>
+            <a href="solution.html" data-service="motor">Motor Monitoring</a>
+            <a href="solution.html" data-service="production">Production Monitoring</a>
+            <a href="solution.html" data-service="predictive">Predictive Maintenance</a>
+            <a href="solution.html" data-service="automation">Industrial Automation</a>
+          </div>
+        </div>
+        
+        <a href="digital_twin.html" style="white-space: nowrap;">Digital Twin</a>
+        <a href="ERP/index.html#/login" style="white-space: nowrap;">ERP Portal</a>
+        <a href="software.html" class="active">Software</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="nav-search" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+        </button>
+        <a href="contact.html" class="btn-get-started">GET STARTED <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="solution-hero" aria-label="Software hero">
+    <div class="solution-carousel">
+      <div class="solution-slide active">
+        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1920&q=80" alt="Software development" loading="eager">
+        <div class="solution-slide-overlay"></div>
+        <div class="solution-slide-content">
+          <p class="solution-tagline">Industrial Software Solutions</p>
+          <h1 class="solution-heading">Custom Software for Smart Industry</h1>
+          <p class="solution-description">Powerful, tailored software solutions for energy monitoring, production tracking, SCADA systems, and industrial automation.</p>
+          <a href="#software-products" class="btn-explore">Explore Products <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOFTWARE PRODUCTS SECTIONS -->
+  <div class="software-sections" id="software-products">
+    
+    <!-- Section 1: Digital Twins of Business and Operational Processes (Text Left, Video Right) -->
+    <section class="software-section">
+      <div class="software-section-header">
+        <h2>Digital Twins of Business and Operational Processes</h2>
+      </div>
+      <div class="software-content-wrapper">
+        <div class="software-text-content">
+          <h3>Digital Twins of Business and Operational Processes</h3>
+          <p>Epsilon Systems builds custom digital twins that translate operational challenges into reliable software to improve efficiency, visibility, and decision-making.</p>
+          <p>We support startups, enterprises, and institutions in their digital transformation journey with a strong engineering mindset and practical problem-solving.</p>
+          <p>Our goal is to deliver tailor-made solutions that align with specific goals, processes, and future growth plans.</p>
+        </div>
+        <div class="software-video-container">
+          <video autoplay muted loop playsinline>
+            <source src="assets/img/Motor Vibe Dashboard.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Web Application Development (Text Left, Carousel Right) -->
+    <section class="software-section">
+      <div class="software-section-header">
+        <h2>Web Application Development</h2>
+      </div>
+      <div class="software-content-wrapper">
+        <div class="software-text-content">
+          <h3>Web Applications Built Around Your Business</h3>
+          <p>We build custom web applications designed from the ground up to ensure full alignment with real business workflows, scalability, and long-term usability.</p>
+          <h3>Key Capabilities</h3>
+          <ul class="software-features">
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Fully customized web applications tailored to specific business requirements</span>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Secure authentication and role based access control</span>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Scalable backend architectures for multi-site expansion</span>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Interactive dashboards and real-time data visualization</span>
+            </li>
+          </ul>
+          <h3>Proven Experience</h3>
+          <p>Our OKR Management System, developed for the National Incubation Center (NIC), demonstrates our ability to scale platforms across multiple organizational units.</p>
+        </div>
+        <div class="software-carousel-container">
+          <div class="software-carousel software-carousel--webapps" data-interval="4500">
+            <div class="software-carousel-slide active">
+              <img src="assets/img/App1.jpeg" alt="Custom web application interface" loading="lazy">
+            </div>
+            <div class="software-carousel-slide">
+              <img src="assets/img/App2.jpeg" alt="Team collaborating on web platform design" loading="lazy">
+            </div>
+            <div class="software-carousel-slide">
+              <img src="assets/img/App3.jpeg" alt="Analytics dashboard for web applications" loading="lazy">
+            </div>
+            <div class="software-carousel-slide">
+              <img src="assets/img/App4.jpeg" alt="Analytics dashboard for web applications" loading="lazy">
+            </div>
+          </div>
+          <div class="carousel-indicators"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Customized AI-Powered Platforms (Carousel Left, Text Right) -->
+    <section class="software-section">
+      <div class="software-section-header">
+        <h2>Customized AI-Powered Platforms</h2>
+      </div>
+      <div class="software-content-wrapper">
+        <div class="software-text-content">
+          <h3>Customized AI-Powered Platforms</h3>
+          <p>We design purpose-built AI platforms tightly integrated with business data to deliver measurable operational and strategic value.</p>
+          <h3>Key Capabilities</h3>
+          <ul class="software-features">
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Predictive and forecasting systems using real-time data</span>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Intelligent recommendation and alerting engines</span>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>AI models integrated into existing web, ERP, or monitoring systems</span>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Secure, explainable, and continuously improvable AI architectures</span>
+            </li>
+          </ul>
+          <p>Our approach ensures AI becomes a core capability embedded within your platform, enabling faster, smarter, and data-backed decisions.</p>
+        </div>
+        <div class="software-carousel-container">
+          <div class="software-carousel software-carousel--ai-platforms" data-interval="4500">
+            <div class="software-carousel-slide active">
+              <img src="assets/img/solution/production-monitoring.jpg" alt="Production Dashboard" loading="lazy">
+            </div>
+            <div class="software-carousel-slide">
+              <img src="assets/img/dashboard.jpeg" alt="Factory Floor Monitoring" loading="lazy">
+            </div>
+            <div class="software-carousel-slide">
+              <img src="assets/img/motor.png" alt="Industrial Analytics" loading="lazy">
+            </div>
+          </div>
+          <div class="carousel-indicators"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Customized ERP Solutions (Text Left, Carousel Right) -->
+    <section class="software-section">
+      <div class="software-section-header">
+        <h2>Customized ERP Solutions</h2>
+      </div>
+      <div class="software-content-wrapper">
+        <div class="software-text-content">
+          <h3>Customized ERP Solutions</h3>
+          <p>Unlike generic products, our ERPs are built to adapt to your business, eliminating unnecessary complexity while strengthening operational control and visibility.</p>
+          <h3>What We Deliver</h3>
+          <ul class="software-features">
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Modular architecture covering operations, finance, HR, inventory, and logistics</span>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Seamless data flow across departments to reduce manual dependencies</span>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Real-time operational reporting and dashboards</span>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Integration with AI modules and third-party analytics platforms</span>
+            </li>
+          </ul>
+          <p>Gain a flexible, future-ready system that evolves with your process changes and technological advancements.</p>
+        </div>
+        <div class="software-carousel-container">
+          <div class="software-carousel" data-interval="3500">
+            <div class="software-carousel-slide active">
+              <img src="assets/img/ERP.jpeg" alt="Predictive Analytics Dashboard" loading="lazy">
+            </div>
+          </div>
+          <div class="carousel-indicators"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: AI Automation for Business Processes (Carousel Left, Text Right) -->
+    <section class="software-section">
+      <div class="software-section-header">
+        <h2>AI Automation for Business Processes</h2>
+      </div>
+      <div class="software-content-wrapper">
+        <div class="software-text-content">
+          <h3>AI Automation for Business Processes</h3>
+          <p>We deliver AI-driven automation to streamline core workflows across departments like CRM, HRM, and Logistics, reducing manual effort and operational bottlenecks.</p>
+          <h3>Proven Use Case: AI Inventory Management System</h3>
+          <p>Our AI-powered Inventory Management System automates inventory monitoring, client email communications, and invoice generation.</p>
+        </div>
+        <div class="software-carousel-container">
+          <div class="software-carousel" data-interval="4000">
+            <div class="software-carousel-slide active">
+              <img src="assets/img/AI AUTOMATION.jpeg" alt="SCADA Control Room" loading="lazy">
+            </div>
+          </div>
+          <div class="carousel-indicators"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; <span id="year"></span> Epsilon Systems. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.addEventListener('DOMContentLoaded', function() {
+      // Hamburger Menu Toggle
+      const navToggle = document.querySelector('.nav-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+      
+      if (navToggle && navMenu) {
+        navToggle.addEventListener('click', function() {
+          const isActive = navMenu.classList.toggle('active');
+          navToggle.classList.toggle('active', isActive);
+          navToggle.setAttribute('aria-expanded', isActive);
+        });
+        
+        // Close menu when clicking on a link
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            navMenu.classList.remove('active');
+            navToggle.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+          if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+            navMenu.classList.remove('active');
+            navToggle.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+      
+      // Dropdown functionality
+      const dropdowns = document.querySelectorAll('.nav-dropdown');
+      
+      dropdowns.forEach(dropdown => {
+        const btn = dropdown.querySelector('.nav-dropdown-btn');
+        
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          dropdowns.forEach(d => {
+            if (d !== dropdown) {
+              d.classList.remove('active');
+            }
+          });
+          
+          dropdown.classList.toggle('active');
+        });
+      });
+      
+      // Close dropdown when clicking on service links
+      const serviceLinks = document.querySelectorAll('.nav-dropdown-content a[data-service]');
+      serviceLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          dropdowns.forEach(d => d.classList.remove('active'));
+        });
+      });
+      
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.nav-dropdown')) {
+          dropdowns.forEach(d => d.classList.remove('active'));
+        }
+      });
+      
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          dropdowns.forEach(d => d.classList.remove('active'));
+        }
+      });
+
+      // ===== AUTO-PLAYING CAROUSEL FUNCTIONALITY =====
+      const carousels = document.querySelectorAll('.software-carousel');
+      
+      carousels.forEach(carousel => {
+        const slides = carousel.querySelectorAll('.software-carousel-slide');
+        const indicatorsContainer = carousel.parentElement.querySelector('.carousel-indicators');
+        const interval = parseInt(carousel.dataset.interval) || 4000;
+        let currentIndex = 0;
+        let autoplayTimer;
+
+        // Create indicators
+        slides.forEach((_, index) => {
+          const indicator = document.createElement('button');
+          indicator.classList.add('carousel-indicator');
+          if (index === 0) indicator.classList.add('active');
+          indicator.setAttribute('aria-label', `Go to slide ${index + 1}`);
+          indicator.addEventListener('click', () => goToSlide(index));
+          indicatorsContainer.appendChild(indicator);
+        });
+
+        const indicators = indicatorsContainer.querySelectorAll('.carousel-indicator');
+
+        function goToSlide(index) {
+          slides[currentIndex].classList.remove('active');
+          indicators[currentIndex].classList.remove('active');
+          
+          currentIndex = index;
+          if (currentIndex >= slides.length) currentIndex = 0;
+          if (currentIndex < 0) currentIndex = slides.length - 1;
+          
+          slides[currentIndex].classList.add('active');
+          indicators[currentIndex].classList.add('active');
+        }
+
+        function nextSlide() {
+          goToSlide(currentIndex + 1);
+        }
+
+        function startAutoplay() {
+          autoplayTimer = setInterval(nextSlide, interval);
+        }
+
+        function stopAutoplay() {
+          clearInterval(autoplayTimer);
+        }
+
+        // Start autoplay
+        startAutoplay();
+
+        // Pause on hover
+        carousel.parentElement.addEventListener('mouseenter', stopAutoplay);
+        carousel.parentElement.addEventListener('mouseleave', startAutoplay);
+
+        // Pause when not visible (Intersection Observer)
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              startAutoplay();
+            } else {
+              stopAutoplay();
+            }
+          });
+        }, { threshold: 0.3 });
+
+        observer.observe(carousel.parentElement);
+      });
+    });
+  </script>
+</body>
+</html>
