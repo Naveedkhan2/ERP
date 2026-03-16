@@ -96,6 +96,7 @@ epsilon-erp/
 │   ├── assets/
 │   ├── screenshots/
 │   └── .htaccess
+
 # API Endpoints 
 
 Authentication
@@ -103,31 +104,31 @@ POST /api/auth/login
 POST /api/auth/logout
 GET  /api/auth/me
 
-# Customers
+Customers
 GET    /api/customers
 GET    /api/customers/:id
 POST   /api/customers
 PUT    /api/customers/:id
 DELETE /api/customers/:id
 
-# Orders
+Orders
 GET    /api/orders
 POST   /api/orders
 PUT    /api/orders/:id
 DELETE /api/orders/:id
 
-# Payroll
+Payroll
 GET    /api/payroll
 POST   /api/payroll
 PUT    /api/payroll/:id
 
-# Inventory
+Inventory
 GET    /api/inventory
 POST   /api/inventory
 PUT    /api/inventory/:id
 DELETE /api/inventory/:id
 
-# Recipes
+Recipes
 GET    /api/recipes
 POST   /api/recipes
 PUT    /api/recipes/:id
