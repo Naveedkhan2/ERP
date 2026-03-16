@@ -1,3 +1,12 @@
+# Epsilon ERP
+
+![React](https://img.shields.io/badge/React-Frontend-61DAFB?logo=react)
+![PHP](https://img.shields.io/badge/PHP-Backend-777BB4?logo=php)
+![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?logo=mysql)
+![Apache](https://img.shields.io/badge/Apache-Web_Server-D22128?logo=apache)
+
+A web-based ERP system for managing customers, orders, payroll, inventory, and recipes.
+
 # Epsilon ERP – Complete Web‑Based ERP System
 Epsilon ERP is a full-stack Enterprise Resource Planning (ERP) web application designed to manage business operations such as customers, orders, payroll, inventory, and recipe/menu management from a centralized dashboard.
 ---
