@@ -46,7 +46,7 @@ Epsilon ERP is a full-stack Enterprise Resource Planning (ERP) web application d
    git clone https://github.com/Naveedkhan2/ERP.git
    cd <ERP>
 
-# Configure database connection:
+## Configure database connection:
 
 erp/config.php
 $DB_HOST = '127.0.0.1';
@@ -54,27 +54,27 @@ $DB_NAME = 'epsilon_erp';
 $DB_USER = 'root';
 $DB_PASS = '';
 
-# Run Locally
+## Run Locally
 cd erp
 php -S localhost:8000
 
-# open
+## open
 ERP portal: http://localhost:8000
 
-# API Base
+## API Base
 
 API base: http://localhost:8000/api/...
 
-# Deployment (Apache / Hostinger)
+## Deployment (Apache / Hostinger)
 
 Upload the erp folder to:
 public_html/erp
 
-# Make sure .htaccess files exist for:
+## Make sure .htaccess files exist for:
 erp/.htaccess
 erp/api/.htaccess
 
-### Admin:
+## Admin:
 
 Email: superadmin@erp.com
 Password: admin
