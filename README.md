@@ -1,6 +1,6 @@
 # Epsilon ERP – Complete Web‑Based ERP System
-A full‑stack ERP for Epsilon Systems to manage customers, orders, payroll, inventory, and menu recipes.  
 
+A full‑stack ERP for Epsilon Systems to manage customers, orders, payroll, inventory, and menu recipes.  
 Frontend is a React single‑page app, backend is PHP + MySQL, deployed on Apache under `/erp`.
 ---
 ## Features
