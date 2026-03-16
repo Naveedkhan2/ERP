@@ -47,7 +47,6 @@ Epsilon ERP is a full-stack Enterprise Resource Planning (ERP) web application d
    cd <ERP>
 
 ## Configure database connection:
-
 erp/config.php
 $DB_HOST = '127.0.0.1';
 $DB_NAME = 'epsilon_erp';
@@ -74,13 +73,16 @@ public_html/erp
 erp/.htaccess
 erp/api/.htaccess
 
-## Admin:
+## Default Credentials
+Admin
 
-Email: superadmin@erp.com
-Password: admin
-Normal user:Naveed@erp.com
+Email: superadmin@erp.com  
+Password: admin  
+
+User
+
+Email: naveed@erp.com  
 Password: 1234567890
-
 
 ## Project Structure
 epsilon-erp/
