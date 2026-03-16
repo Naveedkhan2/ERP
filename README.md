@@ -253,7 +253,7 @@ DELETE /api/recipes/:id
 ![Login](screenshots/login.png)
 
 ### Dashboard
-![Dashboard](screenshots/admin-dashboard.png)
+![Dashboard](screenshots/admin.png)
 
 ### Inventory
 ![Inventory](screenshots/inventory.png)
