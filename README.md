@@ -5,87 +5,165 @@
 ![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?logo=mysql)
 ![Apache](https://img.shields.io/badge/Apache-Web_Server-D22128?logo=apache)
 
-A web-based ERP system for managing customers, orders, payroll, inventory, and recipes.
+A web-based ERP system for managing **customers, orders, payroll, inventory, and recipes** from a centralized dashboard.
 
-# Epsilon ERP – Complete Web‑Based ERP System
-Epsilon ERP is a full-stack Enterprise Resource Planning (ERP) web application designed to manage business operations such as customers, orders, payroll, inventory, and recipe/menu management from a centralized dashboard.
 ---
+
+## Overview
+
+Epsilon ERP is a full-stack **Enterprise Resource Planning (ERP)** system designed to manage business operations efficiently.  
+The system provides role-based access, secure authentication, and a centralized dashboard for business management.
+
+Frontend is built using **React**, while the backend uses **PHP and MySQL**, deployed on **Apache**.
+
+---
+
 ## Features
-### Admin Features
-- Performance dashboard (overall KPIs)
-- Manage customers and client accounts
-- Create, edit and delete orders
-- Payroll management (employees, salaries, slips)
-- Inventory management (items, stock levels, alerts)
-- Menu recipe book management (recipes, ingredients, costing)
-- Manage ERP users and roles
-  
-### User Features
-- Secure login to ERP portal
-- View own customers / assigned orders (role-based)
-- View personal payroll information (for employee role)
-- View inventory and interact according to role (store/warehouse)
-- View menu recipes (production/kitchen role)
-- Track order status and history
-- Personal dashboard with quick stats
-  
-### Authentication
-- Email/password-based login
-- PHP session-based authentication
-- Protected API endpoints and frontend routes
-- Role-based access control (Admin, Accounts/Payroll, Inventory, Production, etc.)
----
-## Tech Stack
-- Backend: PHP (vanilla), Apache, MySQL (PDO)
-- Frontend: React (Vite build), HTML5, CSS3, JavaScript
-- Styling: Custom CSS with blue and white dashboard theme
----
-## Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Naveedkhan2/ERP.git
-   cd <ERP>
 
-## Configure database connection:
+### Admin Features
+
+- Business performance dashboard (KPIs)
+- Manage customers and client accounts
+- Create, update and delete orders
+- Payroll management (employees, salaries, slips)
+- Inventory management with stock tracking
+- Recipe / menu management
+- ERP user and role management
+
+### User Features
+
+- Secure login to ERP portal
+- View assigned customers and orders
+- Track order status and history
+- View personal payroll information
+- Access inventory based on role
+- View recipe book
+- Personal dashboard with quick statistics
+
+### Authentication
+
+- Email and password login
+- PHP session-based authentication
+- Protected API routes
+- Role-based access control (RBAC)
+
+---
+
+## Tech Stack
+
+**Frontend**
+
+- React (Vite)
+- HTML5
+- CSS3
+- JavaScript
+
+**Backend**
+
+- PHP (Vanilla)
+- Apache Server
+- MySQL (PDO)
+
+**Styling**
+
+- Custom CSS
+- Blue and white dashboard theme
+
+---
+
+## Installation
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/Naveedkhan2/ERP.git
+cd ERP
+```
+
+### 2. Configure Database
+
+Edit file:
+
+```
 erp/config.php
+```
+
+Add your database credentials:
+
+```
 $DB_HOST = '127.0.0.1';
 $DB_NAME = 'epsilon_erp';
 $DB_USER = 'root';
 $DB_PASS = '';
+```
 
-## Run Locally
+### 3. Run Locally
+
+```bash
 cd erp
 php -S localhost:8000
+```
 
-## open
-ERP portal: http://localhost:8000
+Open in browser:
 
-## API Base
+```
+http://localhost:8000
+```
 
-API base: http://localhost:8000/api/...
+API Base URL:
+
+```
+http://localhost:8000/api/
+```
+
+---
 
 ## Deployment (Apache / Hostinger)
 
-Upload the erp folder to:
-public_html/erp
+Upload the **erp** folder to:
 
-## Make sure .htaccess files exist for:
+```
+public_html/erp
+```
+
+Make sure these files exist:
+
+```
 erp/.htaccess
 erp/api/.htaccess
+```
+
+Access ERP at:
+
+```
+https://your-domain.com/erp/
+```
+
+---
 
 ## Default Credentials
-Admin
 
-Email: superadmin@erp.com  
-Password: admin  
+⚠ Change before production.
 
-User
+**Admin**
 
-Email: naveed@erp.com  
+```
+Email: superadmin@erp.com
+Password: admin
+```
+
+**User**
+
+```
+Email: naveed@erp.com
 Password: 1234567890
+```
+
+---
 
 ## Project Structure
 
+```
 epsilon-erp/
 │
 ├── erp/
@@ -108,44 +186,66 @@ epsilon-erp/
 │   ├── assets/
 │   ├── screenshots/
 │   └── .htaccess
+```
 
+---
 
 ## API Endpoints
+
 ### Authentication
+
+```
 POST /api/auth/login
 POST /api/auth/logout
 GET  /api/auth/me
+```
 
 ### Customers
+
+```
 GET    /api/customers
 GET    /api/customers/:id
 POST   /api/customers
 PUT    /api/customers/:id
 DELETE /api/customers/:id
+```
 
 ### Orders
+
+```
 GET    /api/orders
 POST   /api/orders
 PUT    /api/orders/:id
 DELETE /api/orders/:id
+```
 
 ### Payroll
+
+```
 GET    /api/payroll
 POST   /api/payroll
 PUT    /api/payroll/:id
+```
 
 ### Inventory
+
+```
 GET    /api/inventory
 POST   /api/inventory
 PUT    /api/inventory/:id
 DELETE /api/inventory/:id
+```
 
 ### Recipes
+
+```
 GET    /api/recipes
 POST   /api/recipes
 PUT    /api/recipes/:id
 DELETE /api/recipes/:id
+```
 
+---
 
 ## Screenshots
 
@@ -156,8 +256,13 @@ DELETE /api/recipes/:id
 ![Inventory](screenshots/inventory.png)
 
 ![Payroll](screenshots/payroll.png)
-Theme
-Primary Blue: #2563eb
-Dark Blue: #1e40af
-Background: white / #f5f7fa
+
+---
+
+## UI Theme
+
+Primary Blue: `#2563eb`  
+Dark Blue: `#1e40af`  
+Background: `#f5f7fa`
+
 Clean, card-based layout focused on dashboards and readability.
