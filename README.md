@@ -251,7 +251,7 @@ DELETE /api/recipes/:id
 
 ![Login](screenshots/login.png)
 
-![Admin Dashboard](screenshots/admin-dashboard.png)
+![Admin Dashboard](screenshots/admin.png)
 
 ![Inventory](screenshots/inventory.png)
 
