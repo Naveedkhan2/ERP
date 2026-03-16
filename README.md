@@ -253,13 +253,20 @@ DELETE /api/recipes/:id
 ![Login](screenshots/login.png)
 
 ### Dashboard
-![Dashboard](screenshots/admin.png)
+![Dashboard](screenshots/admin-dashboard.png)
 
 ### Inventory
 ![Inventory](screenshots/inventory.png)
 
 ### Payroll
 ![Payroll](screenshots/payroll.png)
+
+### Menu
+![Menu](screenshots/menu.png)
+
+### Recipe Book
+![Recipe Book](screenshots/recipe-book.png)
+
 ---
 
 ## UI Theme
