@@ -65,7 +65,7 @@ public_html/erp
 erp/.htaccess
 erp/api/.htaccess
 
-# Admin:
+### Admin:
 
 Email: superadmin@erp.com
 Password: admin
@@ -73,7 +73,7 @@ Normal user:Naveed@erp.com
 Password: 1234567890
 
 
-# Project Structure
+## Project Structure
 epsilon-erp/
 │
 ├── erp/
