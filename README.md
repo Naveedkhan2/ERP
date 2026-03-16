@@ -84,7 +84,8 @@ User
 Email: naveed@erp.com  
 Password: 1234567890
 
-### Project Structure
+## Project Structure
+
 epsilon-erp/
 │
 ├── erp/
