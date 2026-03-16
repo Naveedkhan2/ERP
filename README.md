@@ -249,13 +249,13 @@ DELETE /api/recipes/:id
 
 ## Screenshots
 
-![Login](screenshots/login.png)
+| Login | Dashboard |
+|------|------|
+| ![Login](screenshots/login.png) | ![Dashboard](screenshots/admin.png) |
 
-![Admin Dashboard](screenshots/admin.png)
-
-![Inventory](screenshots/inventory.png)
-
-![Payroll](screenshots/payroll.png)
+| Inventory | Payroll |
+|------|------|
+| ![Inventory](screenshots/inventory.png) | ![Payroll](screenshots/payroll.png) |
 
 ---
 
