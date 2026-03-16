@@ -265,7 +265,7 @@ DELETE /api/recipes/:id
 ![Menu](screenshots/menu.png)
 
 ### Recipe Book
-![Recipe Book](screenshots/recipe-book.png)
+![Recipe Book](screenshots/recipe.png)
 
 ---
 
