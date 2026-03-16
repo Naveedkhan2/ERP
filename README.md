@@ -110,53 +110,52 @@ epsilon-erp/
 │   └── .htaccess
 
 
-# API Endpoints 
-
-Authentication
+## API Endpoints
+### Authentication
 POST /api/auth/login
 POST /api/auth/logout
 GET  /api/auth/me
 
-Customers
+### Customers
 GET    /api/customers
 GET    /api/customers/:id
 POST   /api/customers
 PUT    /api/customers/:id
 DELETE /api/customers/:id
 
-Orders
+### Orders
 GET    /api/orders
 POST   /api/orders
 PUT    /api/orders/:id
 DELETE /api/orders/:id
 
-Payroll
+### Payroll
 GET    /api/payroll
 POST   /api/payroll
 PUT    /api/payroll/:id
 
-Inventory
+### Inventory
 GET    /api/inventory
 POST   /api/inventory
 PUT    /api/inventory/:id
 DELETE /api/inventory/:id
 
-Recipes
+### Recipes
 GET    /api/recipes
 POST   /api/recipes
 PUT    /api/recipes/:id
 DELETE /api/recipes/:id
 
 
-Screenshots
-Store all images in a screenshots/ folder and reference them here:
+## Screenshots
 
-![Login Screen](screenshots/login.png)
+![Login](screenshots/login.png)
+
 ![Admin Dashboard](screenshots/admin-dashboard.png)
-![User Dashboard](screenshots/user-dashboard.png)
-![Payroll Screen](screenshots/payroll.png)
-![Inventory Screen](screenshots/inventory.png)
-![Recipe Book Screen](screenshots/recipes.png)
+
+![Inventory](screenshots/inventory.png)
+
+![Payroll](screenshots/payroll.png)
 Theme
 Primary Blue: #2563eb
 Dark Blue: #1e40af
