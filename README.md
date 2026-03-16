@@ -1,177 +1,189 @@
-# ERP Management System
+Epsilon ERP – Web-Based ERP System
 
-A modern **Enterprise Resource Planning (ERP) System** designed to manage business operations such as authentication, payroll, and organizational workflows.  
-The system integrates a **React-based frontend** with a **PHP backend API**, providing a scalable and modular architecture.
+Epsilon ERP is a full-stack enterprise resource planning system used to manage customers, orders, payroll, inventory, and menu recipes from a centralized dashboard.
 
----
+The frontend is built with React, while the backend uses PHP and MySQL. The application is deployed on Apache under /erp.
 
-# Overview
+Features
+Admin
 
-This ERP platform is built to streamline business processes through a centralized dashboard and API-driven architecture.  
-It includes modules for **user authentication, payroll management, and operational dashboards**.
+Dashboard with business statistics
 
-The frontend provides a responsive UI while the backend handles **data processing, authentication, and database interactions**.
+Manage customers and orders
 
----
+Payroll management
 
-# Technologies Used
+Inventory management with stock tracking
 
-### Frontend
-- React
-- JavaScript
-- HTML5
-- CSS3
+Menu recipe management
 
-### Backend
-- PHP
-- REST API
+User and role management
 
-### Other
-- Git & GitHub
-- Apache / Nginx Server
-- MySQL (or compatible relational database)
+Users
 
----
+Secure login to ERP portal
 
-# Project Structure
+View assigned customers and orders
 
-```
-ERP-Project
+Track order status
+
+View personal payroll information
+
+Access inventory based on role
+
+View recipe book
+
+Tech Stack
+
+Frontend
+
+React (Vite)
+
+HTML5
+
+CSS3
+
+JavaScript
+
+Backend
+
+PHP
+
+Apache
+
+MySQL (PDO)
+
+API
+
+REST-style JSON API under /erp/api
+
+Installation
+Clone Repository
+git clone https://github.com/<your-username>/<repo>.git
+cd <repo>
+Create Database
+
+Create a MySQL database:
+
+epsilon_erp
+
+Import the provided SQL schema.
+
+Configure Database
+
+Edit:
+
+erp/config.php
+$DB_HOST = '127.0.0.1';
+$DB_NAME = 'epsilon_erp';
+$DB_USER = 'root';
+$DB_PASS = '';
+Run Locally
+cd erp
+php -S localhost:8000
+
+Open:
+
+http://localhost:8000
+
+API Base:
+
+http://localhost:8000/api/
+Deployment (Apache / Hostinger)
+
+Upload the erp folder to:
+
+public_html/erp
+
+Make sure .htaccess files exist for:
+
+erp/.htaccess
+erp/api/.htaccess
+
+Live URL:
+
+https://your-domain.com/erp/
+Project Structure
+epsilon-erp/
 │
-├── ERP/                 # Core ERP backend (PHP APIs and modules)
+├── erp/
+│   ├── index.html
+│   ├── config.php
 │
-├── assets/              # Images, CSS, JS, and other static assets
+│   ├── src/
+│   │   ├── Database.php
+│   │   ├── AuthController.php
+│   │   ├── CustomerController.php
+│   │   ├── PayrollController.php
+│   │   ├── InventoryController.php
+│   │   ├── RecipeController.php
+│   │   └── helpers.php
 │
-├── index.html           # Main landing page
-├── contact.html         # Contact page
-├── digital_twin.html    # Digital twin module interface
-├── portfolio.html       # Portfolio page
-├── software.html        # Software services page
-├── solution.html        # Solutions page
-├── news-details.html    # News details page
+│   ├── api/
+│   │   ├── index.php
+│   │   └── .htaccess
 │
-└── README.md
-```
+│   ├── assets/
+│   ├── screenshots/
+│   └── .htaccess
+API Endpoints
 
----
+Authentication
 
-# Features
+POST /api/auth/login
+POST /api/auth/logout
+GET  /api/auth/me
 
-- User authentication system
-- API-based architecture
-- Payroll management module
-- ERP dashboard interface
-- Digital twin integration page
-- Responsive web interface
-- Modular backend structure
+Customers
 
----
+GET    /api/customers
+GET    /api/customers/:id
+POST   /api/customers
+PUT    /api/customers/:id
+DELETE /api/customers/:id
 
-# Installation & Setup
+Orders
 
-## 1 Clone the Repository
+GET    /api/orders
+POST   /api/orders
+PUT    /api/orders/:id
+DELETE /api/orders/:id
 
-```bash
-git clone https://github.com/your-username/ERP.git
-cd ERP
-```
+Inventory
 
----
+GET    /api/inventory
+POST   /api/inventory
+PUT    /api/inventory/:id
+DELETE /api/inventory/:id
 
-# 2 Backend Setup (PHP)
+Payroll
 
-1. Move the project to your server directory
+GET    /api/payroll
+POST   /api/payroll
+PUT    /api/payroll/:id
+
+Recipes
+
+GET    /api/recipes
+POST   /api/recipes
+PUT    /api/recipes/:id
+DELETE /api/recipes/:id
+Screenshots
+screenshots/admin-dashboard.png
+screenshots/user-dashboard.png
+screenshots/login.png
+screenshots/payroll.png
+screenshots/inventory.png
+screenshots/recipes.png
 
 Example:
 
-```
-XAMPP -> htdocs
-```
+![Dashboard](screenshots/admin-dashboard.png)
+Default Credentials
 
-or
+Change before production.
 
-```
-/var/www/html
-```
+Admin
 
-2. Start your server
-
-- Apache
-- MySQL
-
----
-
-# 3 Database Setup
-
-1. Open **phpMyAdmin**
-2. Create a new database
-
-Example:
-
-```
-erp_database
-```
-
-3. Import the SQL file (if provided).
-
----
-
-# 4 Run the Project
-
-Open in browser:
-
-```
-http://localhost/ERP
-```
-
----
-
-# ERP Modules
-
-### Authentication
-Handles user login and access control.
-
-### Payroll System
-Manages employee salary records and payroll tables.
-
-### Digital Twin Dashboard
-Interface for monitoring and simulation systems.
-
-### Website Pages
-Includes portfolio, software solutions, and company information pages.
-
----
-
-# API Architecture
-
-The backend follows a **REST-style API structure** where the frontend communicates with PHP endpoints to perform operations such as:
-
-- User login
-- Data retrieval
-- Payroll operations
-- System management
-
----
-
-# Future Improvements
-
-- Role-based access control
-- Advanced analytics dashboard
-- Inventory management module
-- HR management system
-- Notification system
-
----
-
-# Author
-
-**Naveed Khan**
-
-GitHub:  
-https://github.com/Naveedkhan2
-
----
-
-# License
-
-This project is for a Client Restaurant.
+Email: admin@epsilon-erp.com
+Password: admin123
